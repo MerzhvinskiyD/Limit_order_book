@@ -17,7 +17,7 @@ class Limit_order_book {
   Limit_order_book() = default;
   ~Limit_order_book() = default;
 
-  std::pair<Event, rapidjson::Document> process_data(const std::string& str) {
+  std::pair<Event, rapidjson::Document> process_data(const std::string& str) const {
     rapidjson::Document document;
     document.Parse(str.c_str() + str.find("{"));
 
